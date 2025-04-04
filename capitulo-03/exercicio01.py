@@ -1,13 +1,14 @@
 # Faça um programa que determine e mostre os cinco primeiros múltiplos de 3, considerando números
 #maiores que 0.
 
-numero_usuario = int(input("Digite seu número: "))
-numeros = []
+numero = 1
+contador = 0
 
-if numero_usuario >= 0:
-    for i in range(4):
-        numeros.append(numero_usuario++1)
-else:
-    print("Número menor que ZERO")
-
-print(numeros)
+print("Os cinco primeiros múltiplos de 3 são:")
+while contador <= 4:
+    if numero%3 == 0:
+        print(numero)
+        contador+=1
+        numero+=1
+    else:
+        numero+=1
