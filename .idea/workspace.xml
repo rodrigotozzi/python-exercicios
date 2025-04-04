@@ -37,6 +37,7 @@
   "keyToString": {
     "Python.exercicio01.executor": "Run",
     "Python.exercicio02.executor": "Run",
+    "Python.exercicio03.executor": "Run",
     "Python.exercicio2.executor": "Run",
     "Python.exercicio3.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
