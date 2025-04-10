@@ -2,15 +2,17 @@
 # imprima ela por extenso como “1 de janeiro de 20204”.
 
 def data_extenso():
-    dia = input("Informe o dia: ")
-    mes = input("Informe o mês: ")
+    data = input("Informe a data no modelo dd/mm/aaaa: ")
+    data = data.split("/")
+    dia = data[0]
+    mes = data[1]
     if mes == "01":
         mes = "Janeiro"
     elif mes == "02":
         mes = "Fevereiro"
     elif mes == "03":
         mes = "Março"
-    elif mes == "04"
+    elif mes == "04":
         mes = "Abril"
     elif mes == "05":
         mes = "Maio"
@@ -28,6 +30,7 @@ def data_extenso():
         mes = "Novembro"
     elif mes == "12":
         mes = "Dezembro"
-    ano = input("Informe o ano: ")
+    ano = data[2]
+    print(f'{dia} de {mes} de {ano}')
 
-print(f"")
+data_extenso()
