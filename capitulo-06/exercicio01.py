@@ -3,10 +3,10 @@
 
 class Pessoa:
 
-    def __init__(self, nome, nascimento, email):
-        self.nome = nome
-        self.nascimento = nascimento
-        self.email = email
+    def __init__(self):
+        self.nome = input("Informe o nome: ")
+        self.nascimento = input("Informe a data de nascimento: ")
+        self.email = input("Informe o e-mail: ")
 
     def definir_nome(self):
         self.nome = input("Informe o nome: ")
@@ -20,7 +20,7 @@ class Pessoa:
     def mostrar_dados(self):
         print(f'{self.nome} nasceu em {self.nascimento} e tem o e-mail {self.email}')
 
-pessoa1 = Pessoa("Rodrigo", "22/12/1990", "rodrigo@hotmail.com")
+pessoa1 = Pessoa()
 pessoa1.mostrar_dados()
 
 pessoa1.definir_nome()
