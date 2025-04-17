@@ -26,17 +26,12 @@ class Agenda:
 
     #Informa em que posição da agenda está o contato
     def buscar_contato(self):
-        contador = 0
         buscar = input("Informe o nome do contato que deseja saber o indice: ")
+
         if buscar not in self.contato:
             print("Contato não localizado")
         else:
-            for i in self.contato:
-                contador += 1
-            for i in range(contador):
-                for x in self.contato:
-                    if x == buscar:
-                        print(f'O contato {buscar} está no indice {i}')
+            print(f'O contato "{buscar}" está no indice "{self.contato.index(buscar)}"')
 
     #Imprimir Agenda
     def imprimir_agenda(self):
@@ -44,16 +39,26 @@ class Agenda:
         for i in self.contato:
             print(i)
 
+    #Imprime os dados do contato informado pelo índice
+    def imprimir_contato(self):
+        indice= int(input("Informe o indice do contato que deseja localizar: "))
+        if indice > len(self.contato)-1:
+            print(f'A lista só vai até o índice {len(self.contato)-1}')
+        else:
+            print(self.contato)
+
 agenda1 = Agenda()
 
 agenda1.adicionar_contato()
 agenda1.adicionar_contato()
 agenda1.imprimir_agenda()
 
+agenda1.imprimir_contato()
+
+"""
 #TESTE BUSCAR
 agenda1.buscar_contato()
 
-"""
 #TESTE REMOVER
 agenda1.remover_contato()
 agenda1.imprimir_agenda()
