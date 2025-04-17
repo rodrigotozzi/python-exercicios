@@ -45,7 +45,7 @@ class Agenda:
         if indice > len(self.contato)-1:
             print(f'A lista só vai até o índice {len(self.contato)-1}')
         else:
-            print(self.contato)
+            print(f'O contato "{self.contato[indice]}" está no indice {indice}')
 
 agenda1 = Agenda()
 
@@ -53,9 +53,11 @@ agenda1.adicionar_contato()
 agenda1.adicionar_contato()
 agenda1.imprimir_agenda()
 
+"""
+#TEST INDICE
 agenda1.imprimir_contato()
 
-"""
+
 #TESTE BUSCAR
 agenda1.buscar_contato()
 
