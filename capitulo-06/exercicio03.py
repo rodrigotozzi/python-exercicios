@@ -55,10 +55,21 @@ class Televisao:
             print("Diminuiu 1 unidade do canal")
         print(f'Canal Atual {self.canal}')
 
+    def escolher_canal(self):
+        canal = input("Informe o canal que deseja sintonizar entre 0 e 100: ")
+        while True:
+            if canal == str or float or bool:
+                print("Formato Inválido")
+                canal = input("Informe o canal que deseja sintonizar: ")
+            elif canal == int:
+                break
+        self.canal = canal
+        print(f'Canal Atual {self.canal}')
+
 tv1 = Televisao()
 tv1.estado_atual()
 
-
+tv1.escolher_canal()
 
 
 """
