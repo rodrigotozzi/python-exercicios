@@ -22,6 +22,7 @@ class Televisao:
             self.status = False
         else:
             self.status = True
+        print(f'A Televisão está {self.status}')
 
     def aumentar_volume(self):
         if self.volume == 10:
@@ -56,23 +57,39 @@ class Televisao:
         print(f'Canal Atual {self.canal}')
 
     def escolher_canal(self):
-        canal = input("Informe o canal que deseja sintonizar entre 0 e 100: ")
         while True:
-            if canal == str or float or bool:
-                print("Formato Inválido")
-                canal = input("Informe o canal que deseja sintonizar: ")
-            elif canal == int:
+            canal = int(input("Informe o canal que deseja sintonizar entre 0 e 100: "))
+            if 0 <= canal < 100:
+                self.canal = canal
                 break
-        self.canal = canal
+            else:
+                print("Canal Inválido")
         print(f'Canal Atual {self.canal}')
+
+class ControleRemoto:
+
+    def __init__(self, tv):
+        self.tv = tv
+
+    def tv_conectada(self):
+        print(f'A Televisão conectada é {self.tv}')
+
+    def controle_liga_desliga(self):
+        self.tv.liga_desliga()
 
 tv1 = Televisao()
 tv1.estado_atual()
 
-tv1.escolher_canal()
+controle1 = ControleRemoto(tv1)
+
+tv1.liga_desliga()
+tv1.liga_desliga()
 
 
 """
+TESTE ESCOLHER CANAL
+tv1.escolher_canal()
+
 TESTE DIMINUIR CANAL
 tv1.diminuir_canal()
 
