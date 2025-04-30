@@ -41,6 +41,7 @@
     "Python.exercicio2.executor": "Run",
     "Python.exercicio3.executor": "Run",
     "Python.gerador-numero-aleatorio.executor": "Run",
+    "Python.jogo-adivinhacao.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
