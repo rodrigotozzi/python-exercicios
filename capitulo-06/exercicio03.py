@@ -77,16 +77,32 @@ class ControleRemoto:
     def controle_liga_desliga(self):
         self.tv.liga_desliga()
 
+    def controle_aumentar_volume(self):
+        self.tv.aumentar_volume()
+
+    def controle_diminuir_volume(self):
+        self.tv.diminuir_volume()
+
+    def controle_aumentar_canal(self):
+        self.tv.aumentar_canal()
+
+    def controle_diminuir_canal(self):
+        self.tv.diminuir_canal()
+
 tv1 = Televisao()
 tv1.estado_atual()
 
 controle1 = ControleRemoto(tv1)
 
-tv1.liga_desliga()
-tv1.liga_desliga()
-
-
 """
+TESTE CONTROLAR VOLUME
+controle1.controle_aumentar_volume()
+controle1.controle_diminuir_volume()
+
+TESTE CONTROLE CANAL
+controle1.controle_aumentar_canal()
+controle1.controle_diminuir_canal()
+
 TESTE ESCOLHER CANAL
 tv1.escolher_canal()
 
