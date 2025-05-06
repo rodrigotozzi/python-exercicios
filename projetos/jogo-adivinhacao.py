@@ -7,10 +7,13 @@ from random import randint
 
 def checa_numero(entrada):
     try:
-        int(entrada)
+        return int(entrada)
     except ValueError:
         print("Valor Incorreto")
 
+validacao = False
+
+#ESCOLHA DE NÍVEL E VALIDAÇÃO DE ENTRADA
 while True:
     print("Escolha o Nível: ")
     print("Fácil 0 - 100: 1")
@@ -19,22 +22,28 @@ while True:
     nivel = input()
     try:
         int(nivel)
+        validacao = True
         break
     except ValueError:
         print("Valor Incorreto")
 
-if int(nivel) == 1:
-        numero_certo = randint(0, 2)
+if validacao:
+    if int(nivel) == 1:
+        numero_certo = randint(-1, 101)
+        print("Nível FÁCIL selecionado")
         while True:
             chute = input("Informe o número entre 0 e 100: ")
-            checa_numero(chute)
-            if  0 <= int(chute) <= 100:
-                if int(chute) == numero_certo:
+            try:
+                chute = int(chute)
+            except ValueError:
+                print("Informe um número inteiro")
+            if 0 <= chute <= 100:
+                if chute == numero_certo:
                     print("Parabéns, vc acertou o número!")
                     break
-                elif int(chute) < numero_certo:
+                elif chute < numero_certo:
                     print("Errado, o número certo é MAIOR")
-                elif int(chute) > numero_certo:
+                elif chute > numero_certo:
                     print("Errado, o número certo é MENOR")
             else:
                 print("Valor Inválido!")
