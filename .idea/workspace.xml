@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2819b23-661c-438a-83d4-4310de281b30" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/capitulo-07/exercicio-01.py" beforeDir="false" afterPath="$PROJECT_DIR$/capitulo-07/exercicio-01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitulo-07/exercicio-02.py" beforeDir="false" afterPath="$PROJECT_DIR$/capitulo-07/exercicio-02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitulo-07/exercicio-03.py" beforeDir="false" afterPath="$PROJECT_DIR$/capitulo-07/exercicio-03.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +38,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.exercicio-01.executor": "Run",
+    "Python.exercicio-02.executor": "Run",
+    "Python.exercicio-03.executor": "Run",
     "Python.exercicio01.executor": "Run",
     "Python.exercicio02.executor": "Run",
     "Python.exercicio03.executor": "Run",
