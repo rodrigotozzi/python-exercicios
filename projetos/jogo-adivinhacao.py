@@ -5,12 +5,6 @@ O jogo fornece dicas "maior" ou "menor"
 
 from random import randint
 
-def checa_numero(entrada):
-    try:
-        return int(entrada)
-    except ValueError:
-        print("Valor Incorreto")
-
 validacao = False
 
 #ESCOLHA DE NÍVEL E VALIDAÇÃO DE ENTRADA
@@ -32,11 +26,13 @@ if validacao:
         numero_certo = randint(-1, 101)
         print("Nível FÁCIL selecionado")
         while True:
-            chute = input("Informe o número entre 0 e 100: ")
-            try:
-                chute = int(chute)
-            except ValueError:
-                print("Informe um número inteiro")
+            while True:
+                chute = input("Informe o número entre 0 e 100: ")
+                try:
+                    chute = int(chute)
+                    break
+                except ValueError:
+                    print("Informe um número inteiro")
             if 0 <= chute <= 100:
                 if chute == numero_certo:
                     print("Parabéns, vc acertou o número!")
@@ -47,3 +43,45 @@ if validacao:
                     print("Errado, o número certo é MENOR")
             else:
                 print("Valor Inválido!")
+    if int(nivel) == 2:
+        numero_certo = randint(-1, 1001)
+        print("Nível MÉDIO selecionado")
+        while True:
+            while True:
+                chute = input("Informe o número entre 0 e 1000: ")
+                try:
+                    chute = int(chute)
+                    break
+                except ValueError:
+                    print("Informe um número inteiro")
+            if 0 <= chute <= 1000:
+                if chute == numero_certo:
+                    print("Parabéns, vc acertou o número!")
+                    break
+                elif chute < numero_certo:
+                    print("Errado, o número certo é MAIOR")
+                elif chute > numero_certo:
+                    print("Errado, o número certo é MENOR")
+                else:
+                    print("Valor Inválido!")
+    if int(nivel) == 3:
+        numero_certo = randint(-1, 1000001)
+        print("Nível DIFÍCIL selecionado")
+        while True:
+            while True:
+                chute = input("Informe o número entre 0 e 1.000.000: ")
+                try:
+                    chute = int(chute)
+                    break
+                except ValueError:
+                    print("Informe um número inteiro")
+            if 0 <= chute <= 1000000:
+                if chute == numero_certo:
+                    print("Parabéns, vc acertou o número!")
+                    break
+                elif chute < numero_certo:
+                    print("Errado, o número certo é MAIOR")
+                elif chute > numero_certo:
+                    print("Errado, o número certo é MENOR")
+                else:
+                    print("Valor Inválido!")
