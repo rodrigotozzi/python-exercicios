@@ -15,22 +15,37 @@ def divisao(numero1, numero2):
     else:
         return numero1/numero2
 
-def checa_int(entrada):
+def verificar_entrada(entrada):
     try:
-        int(entrada)
+        valor = float(entrada)
+        if valor == int(valor):
+            return int(valor)
+        else:
+            return float(valor)
     except ValueError:
-        print("Entrada Inválida")
+        return "Entrada Inválida, informe um número"
 
-def checa_float(entrada):
-    try:
-        float(entrada)
-    except ValueError:
-        print("Entrada Inválida")
 
 while True:
-    n1 = input("Informe o primeiro número: ")
-    checa_int(n1)
-    checa_float(n1)
-    n2 = input("Informe o segundo número: ")
-    checa_int(n2)
-    checa_float(n2)
+    while True:
+        n1 = input("Informe o primeiro número: ")
+        try:
+            valor = float(n1)
+            if valor == int(valor):
+                valor = int(valor)
+                break
+            else:
+                valor = float(valor)
+                break
+        except ValueError:
+            print("Entrada Inválida, informe um número")
+
+"""    while True:
+        n2 = input("Informe o segundo número: ")
+        if verificar_entrada(n2) == int(n2) or verificar_entrada(n2) == float(n2):
+            validacao2 = True
+            break
+        else:
+            print(verificar_entrada(n2))"""
+    #print("Qual operação deseja realizar?")
+    #escolha = input("Adição: 1\nSubtração: 2\nMultiplicação: 3\nDivisão: 4\n")
