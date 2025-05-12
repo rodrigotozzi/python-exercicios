@@ -15,37 +15,67 @@ def divisao(numero1, numero2):
     else:
         return numero1/numero2
 
-def verificar_entrada(entrada):
-    try:
-        valor = float(entrada)
-        if valor == int(valor):
-            return int(valor)
-        else:
-            return float(valor)
-    except ValueError:
-        return "Entrada Inválida, informe um número"
-
-
-while True:
+def receber_checar_entrada():
     while True:
-        n1 = input("Informe o primeiro número: ")
+        entrada = input("Informe o número: ")
         try:
-            valor = float(n1)
+            valor = float(entrada)
             if valor == int(valor):
-                valor = int(valor)
-                break
+                return int(entrada)
             else:
-                valor = float(valor)
-                break
+                return float(valor)
         except ValueError:
             print("Entrada Inválida, informe um número")
 
-"""    while True:
-        n2 = input("Informe o segundo número: ")
-        if verificar_entrada(n2) == int(n2) or verificar_entrada(n2) == float(n2):
-            validacao2 = True
-            break
-        else:
-            print(verificar_entrada(n2))"""
-    #print("Qual operação deseja realizar?")
-    #escolha = input("Adição: 1\nSubtração: 2\nMultiplicação: 3\nDivisão: 4\n")
+def escolher_operacao():
+    while True:
+        print("Qual operação deseja realizar?")
+        escolha = input("Adição: 1\nSubtração: 2\nMultiplicação: 3\nDivisão: 4\n")
+        try:
+            valor = int(escolha)
+            if valor == 1:
+                return 1
+            elif valor == 2:
+                return 2
+            elif valor == 3:
+                return 3
+            elif valor == 4:
+                return 4
+            else:
+                print("Valor informado inválido, escolha uma operação de 1 a 4")
+        except ValueError:
+            print("Entrada Inválida, informe um valor de 1 a 4")
+
+def repetir_operacao():
+    while True:
+        repetir = input("Gostaria de fazer outro cálculo?\nSim: 1\nNão: 2")
+        try:
+            repetir = int(repetir)
+            if repetir == 1:
+                return 1
+            elif repetir == 2:
+                return 2
+            else:
+                print("Valor inválido, digite 1 ou 2\n")
+        except ValueError:
+            print("Entrada Inválida, informe 1 ou 2")
+
+
+while True:
+    entrada1 = receber_checar_entrada()
+    entrada2 = receber_checar_entrada()
+    operacao = escolher_operacao()
+    if operacao == 1:
+        print(adicao(entrada1, entrada2))
+        reiniciar = repetir_operacao()
+        if reiniciar == 1:
+            print("Calculadora reiniciada...")
+        elif reiniciar == 2:
+            print("Calculadora finalizada, até a próxima.")
+    elif operacao == 2:
+        print(subtracao(entrada1, entrada2))
+    elif operacao == 3:
+        print(multiplicacao(entrada1, entrada2))
+    elif operacao == 4:
+        print(divisao(entrada1, entrada2))
+
