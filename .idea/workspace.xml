@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2819b23-661c-438a-83d4-4310de281b30" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/projetos/calculadora-basica.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetos/calculadora-bascia.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +46,7 @@
     &quot;Python.exercicio3.executor&quot;: &quot;Run&quot;,
     &quot;Python.gerador-numero-aleatorio.executor&quot;: &quot;Run&quot;,
     &quot;Python.jogo-adivinhacao.executor&quot;: &quot;Run&quot;,
+    &quot;Python.to-do-list.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
