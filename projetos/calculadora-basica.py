@@ -48,7 +48,7 @@ def escolher_operacao():
 
 def repetir_operacao():
     while True:
-        repetir = input("Gostaria de fazer outro cálculo?\nSim: 1\nNão: 2")
+        repetir = input("Gostaria de fazer outro cálculo?\nSim: 1\nNão: 2\n")
         try:
             repetir = int(repetir)
             if repetir == 1:
@@ -58,7 +58,7 @@ def repetir_operacao():
             else:
                 print("Valor inválido, digite 1 ou 2\n")
         except ValueError:
-            print("Entrada Inválida, informe 1 ou 2")
+            print("Entrada Inválida, informe 1 ou 2\n")
 
 
 while True:
@@ -72,10 +72,28 @@ while True:
             print("Calculadora reiniciada...")
         elif reiniciar == 2:
             print("Calculadora finalizada, até a próxima.")
+            break
     elif operacao == 2:
         print(subtracao(entrada1, entrada2))
+        reiniciar = repetir_operacao()
+        if reiniciar == 1:
+            print("Calculadora reiniciada...")
+        elif reiniciar == 2:
+            print("Calculadora finalizada, até a próxima.")
+            break
     elif operacao == 3:
         print(multiplicacao(entrada1, entrada2))
+        reiniciar = repetir_operacao()
+        if reiniciar == 1:
+            print("Calculadora reiniciada...")
+        elif reiniciar == 2:
+            print("Calculadora finalizada, até a próxima.")
+            break
     elif operacao == 4:
         print(divisao(entrada1, entrada2))
-
+        reiniciar = repetir_operacao()
+        if reiniciar == 1:
+            print("Calculadora reiniciada...")
+        elif reiniciar == 2:
+            print("Calculadora finalizada, até a próxima.")
+            break
